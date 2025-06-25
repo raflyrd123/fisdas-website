@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorium Fisika Dasar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- Kiri: logo + menu -->
+      <div class="navbar-left">
+        <a href="index.html">
+          <img src="assets/logo-fisdas.png" class="logo" alt="Logo Fisdas">
+        </a>
+        <div class="separator"></div>
+        <div class="nav-links">
+          <!-- Desktop/Tablet (teks) -->
+          <a href="aktivitas.html" class="desktop-only">Aktivitas</a>
+          <a href="profil-angkatan.html" class="desktop-only">Profil Angkatan</a>
+          <a href="organigram.html" class="desktop-only">Organigram</a>
+
+          <!-- Mobile (ikon) -->
+          <a href="aktivitas.html" class="mobile-only"><img src="assets/menu/aktivitas.png" alt="Home"
+              class="nav-icon" /></a>
+          <a href="profil-angkatan.html" class="mobile-only"><img src="assets/menu/profil_angkatan.png" alt="Profil"
+              class="nav-icon" /></a>
+          <a href="organigram.html" class="mobile-only"><img src="assets/menu/organigram.png" alt="Struktur"
+              class="nav-icon" /></a>
+        </div>
+
+      </div>
+      <!-- Kanan: kontak + icon menu -->
+      <div class="navbar-right">
+        <a href="kontak.html" class="kontak-btn">Kontak</a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown-menu" class="dropdown-menu hidden">
+      <a href="tata-tertib.html"><img src="assets/menu/tata_tertib.png" class="dropdown-icon"> Tata Tertib</a>
+      <a href="modul-praktikum.html"><img src="assets/menu/modul_praktikum.png" class="dropdown-icon"> Modul Praktikum</a>
+      <a href="tugas-pendahuluan.html"><img src="assets/menu/tugas_pendahuluan.png" class="dropdown-icon"> Tugas Pendahuluan</a>
+      <a href="video-pembelajaran.html"><img src="assets/menu/video_pembelajaran.png" class="dropdown-icon"> Video Pembelajaran</a>
+      <a href="jadwal-praktikum.html"><img src="assets/menu/jadwal_praktikum.png" class="dropdown-icon"> Jadwal Praktikum</a>
+      <a href="kontak-asisten.html"><img src="assets/menu/kontak_asisten.png" class="dropdown-icon"> Kontak Asisten</a>
+      <a href="complain-nilai.html"><img src="assets/menu/complain_nilai.png" class="dropdown-icon"> Komplain Nilai</a>
+      <a href="regresi-linear.html"><img src="assets/menu/kalkulator.png" class="dropdown-icon"> Regresi Linear</a>
+      <a href="open-recruitment.html"><img src="assets/menu/open_recruitment.png" class="dropdown-icon"> Open Recruitment</a>
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-subtitle">Website Resmi</h1>
+    <h1 class="hero-title">Laboratorium Fisika Dasar</h1>
+    <h1 class="hero-title">Universitas Telkom</h1>
+    <!-- Hero Visuals: Logo | Divider | Carousel -->
+    <div class="hero-visuals">
+      <div class="hero-logo">
+        <img src="assets/logo-fisdas.png" alt="Logo Fisdas" />
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-img-wrapper">
+        <div class="carousel">
+          <button class="carousel-btn left" onclick="prevImage()">‹</button>
+          <img id="carousel-image" src="assets/foto-praktikum.png" alt="Foto Praktikum" />
+          <button class="carousel-btn right" onclick="nextImage()">›</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Profil -->
+  <section class="section">
+    <h2 class="section-title1">Profil Laboratorium</h2>
+    <div class="section-desc-wrapper">
+      <p class="section-desc">
+        Laboratorium Fisika Dasar merupakan salah satu laboratorium praktikum di bawah naungan Fakultas Teknik Elektro,
+        Universitas Telkom. Laboratorium ini memiliki peran penting dalam proses pembelajaran mahasiswa tingkat pertama
+        pada praktikum Fisika Dasar I dan Fisika Dasar II. Praktikum ini wajib diikuti oleh mahasiswa dari berbagai
+        program studi teknik, seperti S1 Teknik Elektro, S1 Teknik Fisika, S1 Teknik Komputer, S1 Teknik Telekomunikasi,
+        S1 Teknik Biomedis, S1 Teknik Sistem Energi, S1 Teknik Industri, S1 Teknik Logistik, hingga S1 Manajemen
+        Rekayasa Industri. Laboratorium ini berfungsi sebagai sarana untuk mengimplementasikan konsep-konsep fisika yang
+        telah dipelajari secara teori ke dalam bentuk eksperimen nyata, sehingga mahasiswa dapat memahami prinsip ilmiah
+        secara aplikatif dan analitis.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Menu Grid -->
+  <section class="section">
+    <h2 class="section-title2">Menu</h2>
+    <div class="menu-grid">
+      <a class="menu-item" href="tata-tertib.html"><img src="assets/menu/tata_tertib.png"><br>Tata Tertib</a>
+      <a class="menu-item" href="modul-praktikum.html"><img src="assets/menu/modul_praktikum.png"><br>Modul Praktikum</a>
+      <a class="menu-item" href="tugas-pendahuluan.html"><img src="assets/menu/tugas_pendahuluan.png"><br>Tugas
+        Pendahuluan</a>
+      <a class="menu-item" href="video-pembelajaran.html"><img src="assets/menu/video_pembelajaran.png"><br>Video
+        Pembelajaran</a>
+      <a class="menu-item" href="jadwal-praktikum.html"><img src="assets/menu/jadwal_praktikum.png"><br>Jadwal Praktikum</a>
+      <a class="menu-item" href="kontak-asisten.html"><img src="assets/menu/kontak_asisten.png"><br>Kontak Asisten</a>
+      <a class="menu-item" href="complain-nilai.html"><img src="assets/menu/complain_nilai.png"><br>Komplain Nilai</a>
+      <a class="menu-item" href="regresi-linear.html"><img src="assets/menu/kalkulator.png"><br>Regresi Linear</a>
+      <a class="menu-item" href="open-recruitment.html"><img src="assets/menu/open_recruitment.png"><br>Open Recruitment</a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Laboratorium Fisika Dasar<br>Universitas Telkom</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/labfisdas_telu/"><img src="assets/sosmed/instagram.png" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/in/laboratorium-fisika-dasar-telyu"><img src="assets/sosmed/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@LaboratoriumFisikaDasarTelyu"><img src="assets/sosmed/youtube.png" alt="YouTube" /></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Headquarters</h4>
+        <p>
+          TULT 10.14, JL. Telekomunikasi Trs.<br />
+          Buah Batu, Bandung, 40257
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">All Rights Reserved.</div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
