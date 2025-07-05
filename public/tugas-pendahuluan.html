@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas Pendahuluan | Laboratorium Fisika Dasar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- Kiri: logo + menu -->
+      <div class="navbar-left">
+        <a href="index.html">
+          <img src="/assets/img/logo/logo-fisdas.png" class="logo" alt="Logo Fisdas">
+        </a>
+        <div class="separator"></div>
+        <div class="nav-links">
+          <!-- Desktop/Tablet (teks) -->
+          <a href="aktivitas.html" class="desktop-only">Aktivitas</a>
+          <a href="profil-angkatan.html" class="desktop-only">Profil Angkatan</a>
+          <a href="organigram.html" class="desktop-only">Organigram</a>
+
+          <!-- Mobile (ikon) -->
+          <a href="aktivitas.html" class="mobile-only"><img src="/assets/img/menu/aktivitas.png" alt="Aktivitas"
+              class="nav-icon" /></a>
+          <a href="profil-angkatan.html" class="mobile-only"><img src="/assets/img/menu/profil_angkatan.png" alt="Profil"
+              class="nav-icon" /></a>
+          <a href="organigram.html" class="mobile-only"><img src="/assets/img/menu/organigram.png" alt="Struktur"
+              class="nav-icon" /></a>
+        </div>
+
+      </div>
+      <!-- Kanan: kontak + icon menu -->
+      <div class="navbar-right">
+        <a href="kontak.html" class="kontak-btn">Kontak</a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown-menu" class="dropdown-menu hidden">
+      <a href="tata-tertib.html"><img src="/assets/img/menu/tata_tertib.png" class="dropdown-icon"> Tata Tertib</a>
+      <a href="modul-praktikum.html"><img src="/assets/img/menu/modul_praktikum.png" class="dropdown-icon"> Modul
+        Praktikum</a>
+      <a href="tugas-pendahuluan.html"><img src="/assets/img/menu/tugas_pendahuluan.png" class="dropdown-icon"> Tugas
+        Pendahuluan</a>
+      <a href="video-pembelajaran.html"><img src="/assets/img/menu/video_pembelajaran.png" class="dropdown-icon"> Video
+        Pembelajaran</a>
+      <a href="jadwal-praktikum.html"><img src="/assets/img/menu/jadwal_praktikum.png" class="dropdown-icon"> Jadwal
+        Praktikum</a>
+      <a href="kontak-asisten.html"><img src="/assets/img/menu/kontak_asisten.png" class="dropdown-icon"> Kontak Asisten</a>
+      <a href="complain-nilai.html"><img src="/assets/img/menu/complain_nilai.png" class="dropdown-icon"> Komplain Nilai</a>
+      <a href="regresi-linear.html"><img src="/assets/img/menu/kalkulator.png" class="dropdown-icon"> Regresi Linear</a>
+    </div>
+  </header>
+
+  <!-- ===== KONTEN ===== -->
+  <section class="section">
+    <h2 class="section-title1">Tugas Pendahuluan</h2>
+    <p class="tp-himbauan">
+      Soal Tugas Pendahuluan tersedia setiap hari Kamis pukul 17.00 WLFD. Mohon untuk memeriksa secara rutin, karena
+      perubahan soal dapat terjadi sewaktu-waktu.
+    </p>
+    <div class="search-bar">
+      <input type="text" placeholder="Cari modul..." onkeyup="filterCards(this)">
+      <img src="/assets/img/icon/search.png" alt="Search" class="search-icon">
+    </div>
+
+
+    <!-- Di dalam <div class="cards" id="modulCards"> -->
+    <div class="cards" id="modulCards">
+
+      <!-- 1 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/glb.png" class="card-icon" alt="GLB">
+          <div class="card-info">
+            <p class="kode">GLB & GLBB</p>
+            <p class="judul">Gerak Lurus Beraturan & Berubah Beraturan</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 2 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/gmb.png" class="card-icon" alt="GMB">
+          <div class="card-info">
+            <p class="kode">GMB</p>
+            <p class="judul">Gerak Melingkar Beraturan I & II</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 3 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/gm.png" class="card-icon" alt="GM">
+          <div class="card-info">
+            <p class="kode">GM</p>
+            <p class="judul">Gerak Menggelinding</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 4 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/mi1.png" class="card-icon" alt="MI1">
+          <div class="card-info">
+            <p class="kode">MI1</p>
+            <p class="judul">Momen Inersia 1</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 5 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/mi2.png" class="card-icon" alt="MI2 & OSI">
+          <div class="card-info">
+            <p class="kode">MI2 & OSI</p>
+            <p class="judul">Momen Inersia 2 & Gerak Osilasi</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 6 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/gjb.png" class="card-icon" alt="GJB">
+          <div class="card-info">
+            <p class="kode">GJB</p>
+            <p class="judul">Gerak Jatuh Bebas</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 7 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/hkm.png" class="card-icon" alt="HKM">
+          <div class="card-info">
+            <p class="kode">HKM</p>
+            <p class="judul">Hukum Kekekalan Momentum</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 8 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/h2n.png" class="card-icon" alt="H2N & HKEM">
+          <div class="card-info">
+            <p class="kode">H2N & HKEM</p>
+            <p class="judul">Hukum II Newton & Kekekalan Energi Mekanik</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 9 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/sgh.png" class="card-icon" alt="SGH">
+          <div class="card-info">
+            <p class="kode">SGH</p>
+            <p class="judul">Superposisi Getaran Harmonik</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 10 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/rgb.png" class="card-icon" alt="RGB">
+          <div class="card-info">
+            <p class="kode">RGB</p>
+            <p class="judul">Resonansi Gelombang Bunyi</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 11 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/pbl.png" class="card-icon" alt="PBL">
+          <div class="card-info">
+            <p class="kode">PBL</p>
+            <p class="judul">Pengukuran Besaran Listrik I, II, & III</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 12 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/kap.png" class="card-icon" alt="KAP">
+          <div class="card-info">
+            <p class="kode">KAP</p>
+            <p class="judul">Kapasitor</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 13 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/im.png" class="card-icon" alt="IM">
+          <div class="card-info">
+            <p class="kode">IM</p>
+            <p class="judul">Induksi Magnetik I, II, & III</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 14 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/pl.png" class="card-icon" alt="PL">
+          <div class="card-info">
+            <p class="kode">PL</p>
+            <p class="judul">Pendahuluan Kelistrikan</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+
+      <!-- 15 -->
+      <div class="card">
+        <div class="card-header">
+          <img src="/assets/img/tp/jw.png" class="card-icon" alt="JW">
+          <div class="card-info">
+            <p class="kode">JW</p>
+            <p class="judul">Jembatan Wheatstone</p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a href="#"><img src="/assets/img/icon/indonesia-flag.png" class="flag-icon" alt="ID"> Indonesia</a>
+          <a href="#"><img src="/assets/img/icon/uk-flag.png" class="flag-icon" alt="EN"> English</a>
+        </div>
+
+      </div>
+    </div>
+    <p id="no-tp-message" class="tp-himbauan hidden">
+      Belum ada soal Tugas Pendahuluan yang tersedia saat ini.<br>
+      Silakan periksa kembali secara berkala. Jika hari ini tidak ada TP, selamat, kamu bisa rehat sejenak!
+    </p>
+
+  </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Laboratorium Fisika Dasar<br>Universitas Telkom</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/labfisdas_telu/"><img src="/assets/img/sosmed/instagram.png"
+              alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/in/laboratorium-fisika-dasar-telyu"><img src="/assets/img/sosmed/linkedin.png"
+              alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@LaboratoriumFisikaDasarTelyu"><img src="/assets/img/sosmed/youtube.png"
+              alt="YouTube" /></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Headquarters</h4>
+        <p>
+          TULT 10.14, JL. Telekomunikasi Trs.<br />
+          Buah Batu, Bandung, 40257
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">All Rights Reserved.</div>
+  </footer>
+
+
+  <script src="/assets/js/public/tp.js"></script>
+</body>
+
+</html>

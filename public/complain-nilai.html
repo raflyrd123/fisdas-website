@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komplain Nilai | Laboratorium Fisika Dasar</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- Kiri: logo + menu -->
+      <div class="navbar-left">
+        <a href="index.html">
+          <img src="/assets/img/logo/logo-fisdas.png" class="logo" alt="Logo Fisdas">
+        </a>
+        <div class="separator"></div>
+        <div class="nav-links">
+          <!-- Desktop/Tablet (teks) -->
+          <a href="aktivitas.html" class="desktop-only">Aktivitas</a>
+          <a href="profil-angkatan.html" class="desktop-only">Profil Angkatan</a>
+          <a href="organigram.html" class="desktop-only">Organigram</a>
+
+          <!-- Mobile (ikon) -->
+          <a href="aktivitas.html" class="mobile-only"><img src="/assets/img/menu/aktivitas.png" alt="Aktivitas"
+              class="nav-icon" /></a>
+          <a href="profil-angkatan.html" class="mobile-only"><img src="/assets/img/menu/profil_angkatan.png" alt="Profil"
+              class="nav-icon" /></a>
+          <a href="organigram.html" class="mobile-only"><img src="/assets/img/menu/organigram.png" alt="Struktur"
+              class="nav-icon" /></a>
+        </div>
+
+      </div>
+      <!-- Kanan: kontak + icon menu -->
+      <div class="navbar-right">
+        <a href="kontak.html" class="kontak-btn">Kontak</a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown-menu" class="dropdown-menu hidden">
+      <a href="tata-tertib.html"><img src="/assets/img/menu/tata_tertib.png" class="dropdown-icon"> Tata Tertib</a>
+      <a href="modul-praktikum.html"><img src="/assets/img/menu/modul_praktikum.png" class="dropdown-icon"> Modul
+        Praktikum</a>
+      <a href="tugas-pendahuluan.html"><img src="/assets/img/menu/tugas_pendahuluan.png" class="dropdown-icon"> Tugas
+        Pendahuluan</a>
+      <a href="video-pembelajaran.html"><img src="/assets/img/menu/video_pembelajaran.png" class="dropdown-icon"> Video
+        Pembelajaran</a>
+      <a href="jadwal-praktikum.html"><img src="/assets/img/menu/jadwal_praktikum.png" class="dropdown-icon"> Jadwal
+        Praktikum</a>
+      <a href="kontak-asisten.html"><img src="/assets/img/menu/kontak_asisten.png" class="dropdown-icon"> Kontak Asisten</a>
+      <a href="complain-nilai.html"><img src="/assets/img/menu/complain_nilai.png" class="dropdown-icon"> Komplain Nilai</a>
+      <a href="regresi-linear.html"><img src="/assets/img/menu/kalkulator.png" class="dropdown-icon"> Regresi Linear</a>
+    </div>
+  </header>
+
+<section class="section">
+  <h2 class="section-title1">Form Komplain Nilai</h2>
+  <p class="tp-himbauan">Silakan isi form berikut untuk menyampaikan komplain terkait nilai praktikum Anda.</p>
+
+  <form id="komplainForm" class="complain-form">
+    <div class="form-group">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Itu Saya" required>
+    </div>
+    <div class="form-group">
+      <label for="nim">NIM</label>
+      <input type="text" id="nim" name="nim" placeholder="Contoh: 1102213xxxxx" required>
+    </div>
+    <div class="form-group">
+      <label for="nomor_kontak">Nomor Kontak</label>
+      <input type="text" id="nomor_kontak" name="nomor_kontak" placeholder="Contoh: 081234567890" required>
+    </div>
+    <div class="form-group">
+      <label for="jurusan">Jurusan</label>
+      <input type="text" id="jurusan" name="jurusan" placeholder="Contoh: S1 Teknik Elektro" required>
+    </div>
+    <div class="form-group">
+      <label for="kelas">Kelas</label>
+      <input type="text" id="kelas" name="kelas" placeholder="Contoh: EL-46-05" required>
+    </div>
+    <div class="form-group">
+      <label for="kelompok">Kelompok</label>
+      <input type="text" id="kelompok" name="kelompok" placeholder="Contoh: A, B, C, dst" required>
+    </div>
+    <div class="form-group">
+      <label for="hari_shift">Hari Praktikum / Shift</label>
+      <input type="text" id="hari_shift" name="hari_shift" placeholder="Contoh: Senin/3" required>
+    </div>
+    <div class="form-group">
+      <label for="masalah">Jenis Masalah</label>
+      <select id="masalah" name="masalah" required>
+        <option value="">Pilih Masalah</option>
+        <option value="ketidaksesuaian">Ketidaksesuaian Nilai</option>
+        <option value="belum_diinput">Nilai Belum diinput</option>
+      </select>
+    </div>
+
+    <!-- Ketidaksesuaian -->
+    <div id="ketidaksesuaianFields" class="conditional hidden">
+      <div class="form-group">
+        <label for="minggu_ketidaksesuaian">Nilai Minggu ke-</label>
+        <input type="text" id="minggu_ketidaksesuaian" placeholder="Contoh: Minggu 3">
+      </div>
+      <div class="form-group">
+        <label for="asisten_ketidaksesuaian">Kode Asisten Pendamping</label>
+        <input type="text" id="asisten_ketidaksesuaian" placeholder="Contoh: XYZ">
+      </div>
+      <div class="form-group">
+        <label for="deskripsi_masalah">Deskripsi Masalah</label>
+        <textarea id="deskripsi_masalah" rows="3" placeholder="Contoh: Nilai I2 dan TP TA saya seharusnya 100, tapi di akun Seelabs saya 99."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="link_bukti">Link Bukti (Google Drive)</label>
+        <input type="url" id="link_bukti" placeholder="Contoh: https://drive.google.com/.... *Beri Akses Drive">
+      </div>
+    </div>
+
+    <!-- Belum diinput -->
+    <div id="belumInputFields" class="conditional hidden">
+      <div class="form-group">
+        <label for="minggu_belum">Nilai Minggu ke-</label>
+        <input type="text" id="minggu_belum" placeholder="Contoh: Minggu 4">
+      </div>
+      <div class="form-group">
+        <label for="asisten_belum">Kode Asisten Pendamping</label>
+        <input type="text" id="asisten_belum" placeholder="Contoh: CCC">
+      </div>
+      <div class="form-group">
+        <label for="semua_belum_diinput">Apakah satu kelompok belum diinput?</label>
+        <select id="semua_belum_diinput">
+          <option value="">Pilih</option>
+          <option value="ya">Ya</option>
+          <option value="tidak">Tidak</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit">Kirim Komplain</button>
+  </form>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Laboratorium Fisika Dasar<br>Universitas Telkom</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/labfisdas_telu/"><img src="/assets/img/sosmed/instagram.png"
+              alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/in/laboratorium-fisika-dasar-telyu"><img src="/assets/img/sosmed/linkedin.png"
+              alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@LaboratoriumFisikaDasarTelyu"><img src="/assets/img/sosmed/youtube.png"
+              alt="YouTube" /></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Headquarters</h4>
+        <p>
+          TULT 10.14, JL. Telekomunikasi Trs.<br />
+          Buah Batu, Bandung, 40257
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">All Rights Reserved.</div>
+  </footer>
+
+
+  <script src="/assets/js/public/komplain.js"></script>
+
+</body>
+
+</html>

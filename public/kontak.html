@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktivitas | Laboratorium Fisika Dasar</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- Kiri: logo + menu -->
+      <div class="navbar-left">
+        <a href="index.html">
+          <img src="/assets/img/logo/logo-fisdas.png" class="logo" alt="Logo Fisdas">
+        </a>
+        <div class="separator"></div>
+        <div class="nav-links">
+          <!-- Desktop/Tablet (teks) -->
+          <a href="aktivitas.html" class="desktop-only">Aktivitas</a>
+          <a href="profil-angkatan.html" class="desktop-only">Profil Angkatan</a>
+          <a href="organigram.html" class="desktop-only">Organigram</a>
+
+          <!-- Mobile (ikon) -->
+          <a href="aktivitas.html" class="mobile-only"><img src="/assets/img/menu/aktivitas.png" alt="Aktivitas"
+              class="nav-icon" /></a>
+          <a href="profil-angkatan.html" class="mobile-only"><img src="/assets/img/menu/profil_angkatan.png"
+              alt="Profil" class="nav-icon" /></a>
+          <a href="organigram.html" class="mobile-only"><img src="/assets/img/menu/organigram.png" alt="Struktur"
+              class="nav-icon" /></a>
+        </div>
+
+      </div>
+      <!-- Kanan: kontak + icon menu -->
+      <div class="navbar-right">
+        <a href="kontak.html" class="kontak-btn">Kontak</a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown-menu" class="dropdown-menu hidden">
+      <a href="tata-tertib.html"><img src="/assets/img/menu/tata_tertib.png" class="dropdown-icon"> Tata Tertib</a>
+      <a href="modul-praktikum.html"><img src="/assets/img/menu/modul_praktikum.png" class="dropdown-icon"> Modul
+        Praktikum</a>
+      <a href="tugas-pendahuluan.html"><img src="/assets/img/menu/tugas_pendahuluan.png" class="dropdown-icon"> Tugas
+        Pendahuluan</a>
+      <a href="video-pembelajaran.html"><img src="/assets/img/menu/video_pembelajaran.png" class="dropdown-icon"> Video
+        Pembelajaran</a>
+      <a href="jadwal-praktikum.html"><img src="/assets/img/menu/jadwal_praktikum.png" class="dropdown-icon"> Jadwal
+        Praktikum</a>
+      <a href="kontak-asisten.html"><img src="/assets/img/menu/kontak_asisten.png" class="dropdown-icon"> Kontak
+        Asisten</a>
+      <a href="complain-nilai.html"><img src="/assets/img/menu/complain_nilai.png" class="dropdown-icon"> Komplain
+        Nilai</a>
+      <a href="regresi-linear.html"><img src="/assets/img/menu/kalkulator.png" class="dropdown-icon"> Regresi Linear</a>
+    </div>
+  </header>
+
+
+
+  <section class="section">
+    <h2 class="section-title1">Kontak Laboratorium</h2>
+    <section class="kontak-medsos">
+      <p class="kontak-dm">
+        Untuk kebutuhan media partner dan kerja sama dengan Laboratorium Fisika Dasar, dapat menghubungi kami melalui DM ke Akun Resmi Instagram:
+        <a href="https://www.instagram.com/labfisdas_telu/" target="_blank">@labfisdas_telu</a>
+      </p>
+    </section>
+
+  <section class="kontak-info-section">
+    <div class="kontak-card">
+      <h3>Alamat Laboratorium</h3>
+      <p>Telkom University Landmark Tower 10.14,<br>Universitas Telkom, Bandung</p>
+
+      <h4>Jam Operasional</h4>
+      <p>Senin - Jumat<br>07.00 - 18.30 WIB</p>
+    </div>
+
+    <div class="kontak-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3389365704516!2d107.628157!3d-6.969282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9bc3974981d%3A0x613eec0feec9fcf7!2sTelkom%20University%20Landmark%20Tower%20(TULT)!5e0!3m2!1sen!2sid!4v1751712058065!5m2!1sen!2sid"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Link Navigasi Penting -->
+  <div class="kontak-petunjuk">
+    <p>Untuk mencari kontak asisten atau melakukan komplain nilai, silahkan klik tombol di bawah ini:</p>
+    <div class="kontak-buttons">
+      <a href="kontak-asisten.html" class="kontak-btn-blue">Kontak Asisten</a>
+      <a href="complain-nilai.html" class="kontak-btn-blue">Komplain Nilai</a>
+    </div>
+  </div>
+  </section>
+
+  <!-- Bisa tambahkan galeri/foto kegiatan nanti jika perlu -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Laboratorium Fisika Dasar<br>Universitas Telkom</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/labfisdas_telu/"><img src="/assets/img/sosmed/instagram.png"
+              alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/in/laboratorium-fisika-dasar-telyu"><img
+              src="/assets/img/sosmed/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://www.youtube.com/@LaboratoriumFisikaDasarTelyu"><img src="/assets/img/sosmed/youtube.png"
+              alt="YouTube" /></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Headquarters</h4>
+        <p>
+          TULT 10.14, JL. Telekomunikasi Trs.<br />
+          Buah Batu, Bandung, 40257
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">All Rights Reserved.</div>
+  </footer>
+
+
+  <script src="/assets/js/public/main.js"></script>
+</body>
+
+</html>
